@@ -2,42 +2,131 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>CSS Temel Ödevi</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CSS Temel Ödevi - Filiz Akın</title>
+    <style>
+        /* Grup Seçici [cite: 104] */
+        h1, h2, p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Header ve Yatay Menü Düzeni [cite: 98, 100] */
+        header {
+            background-color: #fff;
+            padding: 15px 25px;
+            border-bottom: 3px solid #dee2e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Hiyerarşik Seçici: nav içindeki ul [cite: 104] */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Menüyü yatay yapmak için [cite: 98] */
+        nav ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        /* Link stilleri ve Hover efekti [cite: 99] */
+        nav ul li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #0056b3; /* Hover efekti: Renk değişimi [cite: 99] */
+        }
+
+        /* İki Sütunlu Sayfa Düzeni (Flexbox) [cite: 101] */
+        .main-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Sol İçerik Kutusu [cite: 101, 102] */
+        .content-area {
+            flex: 2;
+            background-color: #fff2cc; /* Görseldeki benzer renk [cite: 96] */
+            padding: 20px;
+            border: 1px solid #d6b0a8;
+            border-radius: 5px;
+        }
+
+        /* Sağ Yan Menü/Bilgi Kutusu [cite: 101, 102] */
+        .sidebar-area {
+            flex: 1;
+            background-color: #e1f5fe; /* Görseldeki benzer renk [cite: 96] */
+            padding: 20px;
+            border: 1px solid #b3e5fc;
+            border-radius: 5px;
+        }
+
+        /* Metin Düzenlemeleri [cite: 102] */
+        .content-area p, .sidebar-area p {
+            font-size: 16px;       /* Özellik 1 [cite: 102] */
+            line-height: 1.6;      /* Özellik 2 [cite: 102] */
+            text-align: justify;   /* Özellik 3 [cite: 102] */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            border-top: 1px solid #ccc;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">
-            <h1>CSS Temel Ödevi</h1>
-            <p>Basit bir HTML5 + CSS3 uygulaması</p>
+        <div>
+            <h1>Filiz Akın</h1> [cite: 80]
+            <p>Bilgisayar Mühendisliği Öğrencisi</p> [cite: 80]
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="about.html">Hakkımda</a></li>
-                <li><a href="interests.html">Hizmetler</a></li>
-                <li><a href="contact.html">İletişim</a></li>
+                <li><a href="index.html">Ana Sayfa</a></li> [cite: 82, 99]
+                <li><a href="about.html">Hakkımda</a></li> [cite: 82, 99]
+                <li><a href="interests.html">İlgi Alanlarım</a></li> [cite: 82, 99]
+                <li><a href="contact.html">İletişim</a></li> [cite: 82, 99]
             </ul>
         </nav>
     </header>
 
-    <main class="container">
-        <article class="content">
+    <main class="main-container">
+        
+        <article class="content-area">
             <h2>İçerik</h2>
-            <p>Bu alanda örnek içerik metinleri bulunmaktadır. CSS özellikleriyle bu metinler arasında <strong>boşluklar (line-height)</strong> ve hizalamalar (text-align) düzenlenebilir.</p>
-            <p>Önce CSS ile kutuları yan yana getirmeyi öğrendik, ardından temel seçicileri kullanarak hiyerarşik seçimler yapmayı gördük.</p>
+            <p>Bu web sitesi, Web Programlama dersi kapsamında hazırlanmış <strong>örnek bir kişisel tanıtım sayfasıdır.</strong> Amaç, HTML'in temel etiketlerini öğrenmektir. [cite: 84]</p>
+            <p>Öğrenme hedeflerim arasında HTML temellerini kavramak ve CSS ile modern sayfa tasarımları oluşturmak yer alıyor. [cite: 102]</p>
         </article>
 
-        <aside class="sidebar">
+        <aside class="sidebar-area">
             <h2>Yan Menü / Bilgi</h2>
-            <p>Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik (width), kenar boşlukları (margin/padding) özellikleri kullanılabilir.</p>
-            <p>Öğrendiklerimizi hiyerarşik ve grup seçicilerle uygulayıp farklı bölümlere stil verebiliriz.</p>
+            <p>Hızlı Bilgiler: Marmara Üniversitesi, Bilgisayar Mühendisliği öğrencisiyim. [cite: 85, 102]</p>
+            <p>Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik ve kenarlık özelliklerini kullanarak burayı düzenledik. [cite: 102]</p>
         </aside>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 CSS Temel Örnek. Bu sayfa basit bir HTML+CSS alıştırmasıdır.</p>
+        <p>&copy; 2026 Filiz Akın | Web Programlama Dersi</p> [cite: 87, 103]
     </footer>
 
 </body>
