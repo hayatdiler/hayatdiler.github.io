@@ -2,132 +2,63 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>CSS Temel Ödevi - Hayat Diler</title>
-    <style>
-        /* Grup Seçici [cite: 104] */
-        h1, h2, p {
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-
-        body {
-            background-color: #f0f2f5;
-            margin: 0;
-            padding: 20px;
-        }
-
-        /* Üst Bilgi (Header) Alanı [cite: 100] */
-        header {
-            background-color: #fff;
-            padding: 20px;
-            border-bottom: 2px solid #ddd;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Yatay Menü Düzeni [cite: 98] */
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Menüyü yatay yapmak için inline-block kullanımı [cite: 98] */
-        nav ul li {
-            display: inline-block;
-            margin-left: 20px;
-        }
-
-        /* Hiyerarşik Seçici ve Hover Efekti [cite: 99, 104] */
-        nav ul li a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #0056b3; /* Hoverda renk değişimi [cite: 99] */
-        }
-
-        /* İki Sütunlu İçerik Yapısı  */
-        .main-container {
-            display: flex; /* Kutuları yan yana getirir  */
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        /* Sol İçerik Kutusu  */
-        .content-area {
-            flex: 2;
-            background-color: #fff2cc;
-            padding: 20px;
-            border: 1px solid #e6b8af;
-            border-radius: 8px;
-        }
-
-        /* Sağ Yan Menü/Bilgi Kutusu  */
-        .sidebar-area {
-            flex: 1;
-            background-color: #e1f5fe;
-            padding: 20px;
-            border: 1px solid #b3e5fc;
-            border-radius: 8px;
-        }
-
-        /* Metin Düzenleme Özellikleri  */
-        .content-area p, .sidebar-area p {
-            font-size: 16px;       /* Özellik 1  */
-            line-height: 1.6;      /* Özellik 2  */
-            text-align: justify;   /* Özellik 3  */
-        }
-
-        /* Alt Bilgi (Footer) Alanı [cite: 103] */
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            padding: 20px;
-            border-top: 1px solid #ccc;
-        }
-    </style>
+    <title>Ana Sayfa - Hayat Diler</title>
 </head>
 <body>
-
     <header>
-        <div>
-            <h1>Hayat Diler</h1>
-            <p>Bilgisayar Mühendisliği | Web Programlama Öğrencisi</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="about.html">Hakkımda</a></li>
-                <li><a href="interests.html">İlgi Alanlarım</a></li>
-                <li><a href="contact.html">İletişim</a></li>
-            </ul>
-        </nav>
+        <h1>Hayat Diler</h1>
+        <p>Bilgisayar Mühendisliği | Web Programlama Öğrencisi</p>
     </header>
 
-    <main class="main-container">
-        
-        <article class="content-area">
-            <h2>İçerik</h2>
-            <p>Bu web sitesi, Web Programlama dersi kapsamında hazırlanmış <strong>örnek bir kişisel tanıtım sayfasıdır.</strong> Amaç, HTML ve CSS temellerini uygulamaktır. [cite: 97]</p>
-            <p>Önce kutuları yan yana getirmeyi öğrendik, şimdi ise hiyerarşik seçicileri kullanarak projemizi geliştiriyoruz. [cite: 101, 104]</p>
-        </article>
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="about.html">Hakkımda</a></li>
+            <li><a href="interests.html">İlgi Alanlarım</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+        </ul>
+    </nav>
 
-        <aside class="sidebar-area">
-            <h2>Yan Menü / Bilgi</h2>
-            <p>Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik ve kenarlık özelliklerini kullanarak düzenledik. </p>
-            <p>Üniversite: Marmara Üniversitesi<br>Bölüm: Bilgisayar Mühendisliği</p>
-        </aside>
+    <main>
+        <section>
+            <h2>Hoş Geldiniz</h2>
+            <p>Bu web sitesi, Web Programlama dersi kapsamında hazırlanmış <strong>örnek bir kişisel tanıtım sayfasıdır.</strong> Amaç, HTML'in temel etiketlerini ve sayfa yapısını öğrenmektir.</p>
+            <p>Daha fazla bilgi için <em>Hakkımda</em> sayfasını ziyaret edebilirsiniz.</p>
+        </section>
 
+        <section id="hedef">
+            <h2>Hızlı Bilgiler</h2>
+            <ul>
+                <li>Üniversite: Marmara Üniversitesi</li>
+                <li>Bölüm: Bilgisayar Mühendisliği</li>
+                <li>İlgi Alanı: Web Teknolojileri</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Öğrenme Hedeflerim</h2>
+            <ol>
+                <li>HTML temellerini öğrenmek</li>
+                <li>CSS ile sayfa tasarlamak</li>
+                <li>JavaScript ile etkileşim eklemek</li>
+                <li>ASP.NET Core ile dinamik site geliştirmek</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Faydalı Bağlantılar</h2>
+            <p>Aşağıdaki kaynaklar web geliştirme öğrenirken faydalı olabilir:</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                <li><a href="https://github.com" target="_blank">GitHub</a></li>
+            </ul>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Hayat Diler | Web Programlama Dersi [cite: 103]</p>
+        <hr>
+        <p>&copy; 2026 Hayat Diler | Web Programlama Dersi</p>
     </footer>
-
 </body>
 </html>
