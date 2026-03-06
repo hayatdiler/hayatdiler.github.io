@@ -2,63 +2,43 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Ana Sayfa - Hayat Diler</title>
+    <title>CSS Temel Ödevi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Hayat Diler</h1> 
-        <p>Bilgisayar Mühendisliği | Web Programlama Öğrencisi</p> 
+        <div class="logo">
+            <h1>CSS Temel Ödevi</h1>
+            <p>Basit bir HTML5 + CSS3 uygulaması</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="interests.html">Hizmetler</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li> 
-            <li><a href="about.html">Hakkımda</a></li> 
-            <li><a href="interests.html">İlgi Alanlarım</a></li>
-            <li><a href="contact.html">İletişim</a></li> 
-        </ul>
-    </nav>
+    <main class="container">
+        <article class="content">
+            <h2>İçerik</h2>
+            <p>Bu alanda örnek içerik metinleri bulunmaktadır. CSS özellikleriyle bu metinler arasında <strong>boşluklar (line-height)</strong> ve hizalamalar (text-align) düzenlenebilir.</p>
+            <p>Önce CSS ile kutuları yan yana getirmeyi öğrendik, ardından temel seçicileri kullanarak hiyerarşik seçimler yapmayı gördük.</p>
+        </article>
 
-    <main>
-        <section>
-            <h2>Hoş Geldiniz</h2> 
-            <p>Bu web sitesi, Web Programlama dersi kapsamında hazırlanmış <strong>örnek bir kişisel tanıtım sayfasıdır.</strong> Amaç, HTML'in temel etiketlerini ve sayfa yapısını öğrenmektir.</p> 
-            <p>Daha fazla bilgi için <em>Hakkımda</em> sayfasını ziyaret edebilirsiniz.</p>
-        </section>
-
-        <section id="hedef">
-            <h2>Hızlı Bilgiler</h2> 
-            <ul>
-                <li>Üniversite: Marmara Üniversitesi</li>
-                <li>Bölüm: Bilgisayar Mühendisliği</li>
-                <li>İlgi Alanı: Web Teknolojileri</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Öğrenme Hedeflerim</h2>
-            <ol>
-                <li>HTML temellerini öğrenmek</li>
-                <li>CSS ile sayfa tasarlamak</li>
-                <li>JavaScript ile etkileşim eklemek</li>
-                <li>ASP.NET Core ile dinamik site geliştirmek</li>
-            </ol>
-        </section>
-
-        <section>
-            <h2>Faydalı Bağlantılar</h2>
-            <p>Aşağıdaki kaynaklar web geliştirme öğrenirken faydalı olabilir:</p>
-            <ul>
-                <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
-                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
-                <li><a href="https://github.com" target="_blank">GitHub</a></li>
-            </ul>
-        </section>
+        <aside class="sidebar">
+            <h2>Yan Menü / Bilgi</h2>
+            <p>Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik (width), kenar boşlukları (margin/padding) özellikleri kullanılabilir.</p>
+            <p>Öğrendiklerimizi hiyerarşik ve grup seçicilerle uygulayıp farklı bölümlere stil verebiliriz.</p>
+        </aside>
     </main>
 
     <footer>
-        <hr>
-        <p>&copy; 2026 Hayat Diler | Web Programlama Dersi</p> 
+        <p>&copy; 2026 CSS Temel Örnek. Bu sayfa basit bir HTML+CSS alıştırmasıdır.</p>
     </footer>
+
 </body>
 </html>
