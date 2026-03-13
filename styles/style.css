@@ -106,11 +106,11 @@ footer {
 /* --- LAB 3: İLETİŞİM FORMU STİLLERİ --- */
 
 .contact-container {
-    width: 600px; /* Gereksinim: Belirli bir genişlik [cite: 119] */
-    margin: 40px auto; /* Gereksinim: Sayfayı ortalama [cite: 119] */
-    padding: 30px; /* Gereksinim: İç boşluk (Padding) [cite: 120] */
-    border: 2px solid #ddd; /* Gereksinim: Belirgin kenarlık [cite: 121] */
-    border-radius: 15px; /* Gereksinim: Köşe yuvarlaması [cite: 121] */
+    width: 600px; /* Gereksinim: Belirli bir genişlik  */
+    margin: 40px auto; /* Gereksinim: Sayfayı ortalama */
+    padding: 30px; /* Gereksinim: İç boşluk (Padding) */
+    border: 2px solid #ddd; /* Gereksinim: Belirgin kenarlık*/
+    border-radius: 15px; /* Gereksinim: Köşe yuvarlaması */
     background-color: #ffffff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
@@ -127,15 +127,15 @@ footer {
     font-weight: bold;
 }
 
-/* Çoklu Seçici Kullanımı (Gereksinim [cite: 122, 127]) */
+/* Çoklu Seçici Kullanımı (Gereksinim) */
 .contact-container input[type="text"],
 .contact-container input[type="email"],
 .contact-container input[type="password"],
 .contact-container select,
 .contact-container textarea {
-    width: 100%; /* Gereksinim: Tam genişlik [cite: 123] */
-    padding: 12px; /* Gereksinim: Ferah durması için padding [cite: 124] */
-    margin-bottom: 20px; /* Gereksinim: Alt boşluk (margin-bottom) [cite: 125] */
+    width: 100%; /* Gereksinim: Tam genişlik */
+    padding: 12px; /* Gereksinim: Ferah durması için padding */
+    margin-bottom: 20px; /* Gereksinim: Alt boşluk (margin-bottom) */
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box; /* Padding'in kutuyu büyütmesini engeller */
@@ -149,7 +149,7 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Buton Düzenlemeleri (Gereksinim [cite: 126]) */
+/* Buton Düzenlemeleri (Gereksinim) */
 .button-group {
     display: flex;
     gap: 15px;
@@ -157,10 +157,10 @@ footer {
 
 .btn-gonder {
     flex: 1;
-    background-color: #007bff; /* Arka plan rengi [cite: 126] */
+    background-color: #007bff; /* Arka plan rengi */
     color: white;
-    border: none; /* Kenarlık kaldırma [cite: 126] */
-    padding: 15px 25px; /* Butonu büyütmek için padding [cite: 126] */
+    border: none; /* Kenarlık kaldırma */
+    padding: 15px 25px; /* Butonu büyütmek için padding */
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
