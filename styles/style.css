@@ -103,3 +103,79 @@ footer {
     color: #777;
     font-size: 14px;
 }
+/* --- LAB 3: İLETİŞİM FORMU STİLLERİ --- */
+
+.contact-container {
+    width: 600px; /* Gereksinim: Belirli bir genişlik [cite: 119] */
+    margin: 40px auto; /* Gereksinim: Sayfayı ortalama [cite: 119] */
+    padding: 30px; /* Gereksinim: İç boşluk (Padding) [cite: 120] */
+    border: 2px solid #ddd; /* Gereksinim: Belirgin kenarlık [cite: 121] */
+    border-radius: 15px; /* Gereksinim: Köşe yuvarlaması [cite: 121] */
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Form içindeki başlıklar (Etiketler) */
+.contact-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Çoklu Seçici Kullanımı (Gereksinim [cite: 122, 127]) */
+.contact-container input[type="text"],
+.contact-container input[type="email"],
+.contact-container input[type="password"],
+.contact-container select,
+.contact-container textarea {
+    width: 100%; /* Gereksinim: Tam genişlik [cite: 123] */
+    padding: 12px; /* Gereksinim: Ferah durması için padding [cite: 124] */
+    margin-bottom: 20px; /* Gereksinim: Alt boşluk (margin-bottom) [cite: 125] */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Padding'in kutuyu büyütmesini engeller */
+}
+
+/* Radio ve Checkbox Alanları İçin Arka Plan */
+.radio-group, .checkbox-group {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Buton Düzenlemeleri (Gereksinim [cite: 126]) */
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-gonder {
+    flex: 1;
+    background-color: #007bff; /* Arka plan rengi [cite: 126] */
+    color: white;
+    border: none; /* Kenarlık kaldırma [cite: 126] */
+    padding: 15px 25px; /* Butonu büyütmek için padding [cite: 126] */
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-temizle {
+    flex: 1;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-gonder:hover { background-color: #0056b3; }
+.btn-temizle:hover { background-color: #a71d2a; }
