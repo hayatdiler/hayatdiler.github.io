@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ana Sayfa - Hayat Diler</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
     <header>
@@ -32,7 +32,10 @@
         <aside class="sidebar">
             <h2>Yan Menu / Bilgi</h2>
             <p>Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik ve kenarlık özelliklerini kullanarak düzenledik.</p>
-            <p>Üniversite: Marmara Üniversitesi<br>Bölüm: Bilgisayar Mühendisliği</p>
+            <p>
+                Üniversite: Marmara Üniversitesi<br>
+                Bölüm: Bilgisayar Mühendisliği
+            </p>
         </aside>
     </main>
 
@@ -88,59 +91,42 @@
         <p>&copy; 2026 Hayat Diler | Web Programlama Dersi</p>
     </footer>
 
-    <div id="flex-odev">
+    <div id="flex-odev" class="wrapper">
+        
         <nav class="flex-navbar">
             <div class="logo">LOGO</div>
             <ul class="flex-links">
-                <li><a href="#">Ana Sayfa</a></li>
-                <li><a href="#">Hakkında</a></li>
-                <li><a href="#">Dersler</a></li>
-                <li><a href="#">İletişim</a></li>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
             </ul>
         </nav>
 
         <section class="flex-hero">
             <div class="hero-content">
-                <h2>Hero Başlık</h2>
-                <p>Açıklama metni</p>
-                <button class="flex-btn">Buton</button>
+                <h1>Hero Başlık</h1>
+                <p>Açıklama metni buraya gelecek.</p>
+                <button class="btn">Buton</button>
             </div>
             <div class="hero-image">
-                <p>Görsel Alanı</p>
+                Görsel Kutusu
             </div>
         </section>
 
         <section class="flex-cards">
-            <div class="f-card">
-                <h3>Kart Başlığı</h3><p>Kısa açıklama</p><button class="flex-btn">Buton</button>
-            </div>
-            <div class="f-card">
-                <h3>Kart Başlığı</h3><p>Kısa açıklama</p><button class="flex-btn">Buton</button>
-            </div>
-            <div class="f-card">
-                <h3>Kart Başlığı</h3><p>Kısa açıklama</p><button class="flex-btn">Buton</button>
-            </div>
-            <div class="f-card">
-                <h3>Kart Başlığı</h3><p>Kısa açıklama</p><button class="flex-btn">Buton</button>
-            </div>
-            <div class="f-card">
-                <h3>Kart Başlığı</h3><p>Kısa açıklama</p><button class="flex-btn">Buton</button>
-            </div>
-            <div class="f-card">
-                <h3>Kart Başlığı</h3><p>Kısa açıklama</p><button class="flex-btn">Buton</button>
-            </div>
+            <div class="f-card">Kart 1</div>
+            <div class="f-card">Kart 2</div>
+            <div class="f-card">Kart 3</div>
+            <div class="f-card">Kart 4</div>
+            <div class="f-card">Kart 5</div>
+            <div class="f-card">Kart 6</div>
         </section>
 
         <section class="flex-grow-area">
-            <div class="grow-1">
-                <h3>1 Kutu</h3><p>flex-grow: 1;</p><button class="flex-btn">Buton</button>
-            </div>
-            <div class="grow-2">
-                <h3>2 Kutu</h3><p>flex-grow: 2;</p><button class="flex-btn btn-green">Buton</button>
-            </div>
-            <div class="grow-3">
-                <h3>3 Kutu</h3><p>flex-grow: 1;</p><button class="flex-btn btn-orange">Buton</button>
-            </div>
+            <div class="grow-1">1 Kutu (Grow: 1)</div>
+            <div class="grow-2">2 Kutu (Grow: 2)</div>
+            <div class="grow-3">3 Kutu (Grow: 1)</div>
         </section>
 
         <footer class="flex-bottom">
