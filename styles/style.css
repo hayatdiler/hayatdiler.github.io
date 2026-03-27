@@ -179,3 +179,77 @@ footer {
 
 .btn-gonder:hover { background-color: #0056b3; }
 .btn-temizle:hover { background-color: #a71d2a; }
+
+#flex-odev {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 50px;
+    border: 5px solid #333;
+}
+
+.flex-navbar {
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
+    padding: 0 20px;
+}
+
+.flex-links { display: flex; list-style: none; gap: 15px; }
+
+.flex-hero {
+    display: flex;
+    flex-direction: row;
+    height: 30vh;
+    align-items: stretch;
+}
+
+.hero-content { flex: 1; padding: 20px; background: #fff; }
+.hero-image { flex: 1; background: #ccc; display: flex; justify-content: center; align-items: center; }
+
+.flex-cards {
+    display: flex;
+    flex-wrap: wrap;
+    height: 30vh;
+    gap: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.f-card { 
+    flex: 1 1 150px; 
+    border: 1px solid #999; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background: white;
+}
+
+.flex-grow-area {
+    display: flex;
+    height: 20vh;
+}
+
+.grow-1 { flex-grow: 1; background: #d1ecf1; display: flex; justify-content: center; align-items: center; }
+.grow-2 { flex-grow: 2; background: #d4edda; display: flex; justify-content: center; align-items: center; }
+.grow-3 { flex-grow: 1; background: #fff3cd; display: flex; justify-content: center; align-items: center; }
+
+.flex-bottom {
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    color: white;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    color: #777;
+}
