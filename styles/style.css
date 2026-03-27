@@ -1,8 +1,6 @@
-/* ========================================== */
-/* GENEL AYARLAR (TÜM SAYFA İÇİN)             */
-/* ========================================== */
+/* --- 1. GENEL AYARLAR (BOX MODEL) --- */
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Padding'in genişliği bozmamasını sağlar */
     margin: 0;
     padding: 0;
 }
@@ -11,12 +9,11 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f0f2f5;
     color: #333;
+    padding: 20px;
     line-height: 1.6;
 }
 
-/* ========================================== */
-/* LAB 2: PORTFOLYO VE HEADER STİLLERİ        */
-/* ========================================== */
+/* --- 2. HEADER VE ANA NAVİGASYON --- */
 header {
     background-color: #fff;
     padding: 20px 40px;
@@ -31,15 +28,22 @@ header p { font-size: 14px; color: #666; }
 
 nav ul { list-style-type: none; display: flex; }
 nav ul li { margin-left: 20px; }
-nav ul li a { text-decoration: none; color: #007bff; font-weight: bold; transition: 0.3s; }
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
 nav ul li a:hover { color: #0056b3; text-decoration: underline; }
 
+/* --- 3. İKİ SÜTUNLU PORTFOLYO DÜZENİ (LAB 2) --- */
 .container {
     display: flex;
     gap: 20px;
     margin: 30px auto;
     max-width: 1200px;
-    padding: 0 20px;
 }
 
 .content {
@@ -58,12 +62,9 @@ nav ul li a:hover { color: #0056b3; text-decoration: underline; }
     border-radius: 8px;
 }
 
-/* ========================================== */
-/* LAB 3: İLETİŞİM FORMU                      */
-/* ========================================== */
+/* --- 4. İLETİŞİM FORMU (LAB 3) --- */
 .contact-container {
-    width: 100%;
-    max-width: 600px;
+    width: 600px;
     margin: 40px auto;
     padding: 30px;
     border: 2px solid #ddd;
@@ -75,6 +76,7 @@ nav ul li a:hover { color: #0056b3; text-decoration: underline; }
 .contact-container h2 { text-align: center; margin-bottom: 25px; }
 .contact-container label { display: block; margin-bottom: 8px; font-weight: bold; }
 
+/* Çoklu Seçici Kullanımı */
 .contact-container input[type="text"],
 .contact-container input[type="email"],
 .contact-container input[type="password"],
@@ -98,142 +100,82 @@ nav ul li a:hover { color: #0056b3; text-decoration: underline; }
 .btn-gonder { flex: 1; background: #007bff; color: white; border: none; padding: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; }
 .btn-temizle { flex: 1; background: #dc3545; color: white; border: none; padding: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; }
 
-footer { text-align: center; padding: 20px; color: #777; }
+.btn-gonder:hover { background: #0056b3; }
+.btn-temizle:hover { background: #a71d2a; }
 
-/* ========================================== */
-/* LAB 4: FLEXBOX ÖDEVİ (RESİMDEKİ GÖRÜNÜM)   */
-/* ========================================== */
-
+/* --- 5. FLEXBOX ÖDEV BÖLÜMÜ (LAB 4) --- */
 #flex-odev {
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: #f0f0f0; /* Görseldeki gri arka plan */
-    border-top: 10px solid #333; /* Eski sayfadan ayırmak için kalın çizgi */
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    gap: 15px;
+    flex-direction: column; /* Dikey yerleşim zorunlu */
+    height: 100vh; /* 100vh zorunlu */
+    margin-top: 50px;
+    border: 5px solid #333;
+    background-color: #fff;
 }
 
-/* 1) Navbar */
 .flex-navbar {
     display: flex;
-    height: 10vh;
+    height: 10vh; /* 10vh zorunlu */
     justify-content: space-between;
     align-items: center;
-    background: #e9ecef;
-    padding: 0 30px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    background: #eee;
+    padding: 0 20px;
 }
-.flex-navbar .logo { font-size: 20px; font-weight: bold; color: #555; }
-.flex-links { display: flex; list-style: none; gap: 20px; }
-.flex-links a { text-decoration: none; color: #555; font-size: 14px; }
 
-/* 2) Hero (İki Kolon) */
+.flex-links { display: flex; list-style: none; gap: 15px; }
+
 .flex-hero {
     display: flex;
     flex-direction: row;
-    height: 30vh;
-    justify-content: space-between;
+    height: 30vh; /* 30vh zorunlu */
     align-items: stretch;
-    gap: 15px;
-}
-.hero-content {
-    flex: 1;
-    background: #e9ecef;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-.hero-content h2 { margin-bottom: 10px; color: #333; }
-.hero-content p { margin-bottom: 20px; color: #666; }
-.hero-image {
-    flex: 1;
-    background: #dee2e6;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #999;
-    font-size: 18px;
 }
 
-/* 3) Kartlar Bölümü */
+.hero-content { flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center; }
+.hero-image { flex: 1; background: #ccc; display: flex; justify-content: center; align-items: center; border-left: 1px solid #ddd; }
+
 .flex-cards {
     display: flex;
-    flex-wrap: wrap;
-    height: 30vh;
-    gap: 15px;
-    background: #e9ecef;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
+    flex-wrap: wrap; /* Sığmazsa alt satıra geçme zorunlu */
+    height: 30vh; /* 30vh zorunlu */
+    gap: 10px;
+    padding: 10px;
+    background: #f9f9f9;
 }
+
 .f-card { 
-    flex: 1 1 14%; /* Sığmazsa alta geçer */
-    background: #f8f9fa;
-    border: 1px solid #ccc; 
-    border-radius: 5px;
+    flex: 1 1 150px; 
+    border: 1px solid #999; 
     display: flex; 
-    flex-direction: column;
     justify-content: center; 
     align-items: center;
-    padding: 15px;
-    text-align: center;
+    background: white;
 }
-.f-card h3 { font-size: 16px; margin-bottom: 5px; }
-.f-card p { font-size: 12px; color: #666; margin-bottom: 15px; }
 
-/* 4) Flex Grow Uygulama */
 .flex-grow-area {
     display: flex;
-    height: 20vh;
-    gap: 15px;
-    align-items: stretch;
+    height: 20vh; /* 20vh zorunlu */
 }
-.grow-1, .grow-2, .grow-3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding: 20px;
-}
-.grow-1 { flex-grow: 1; background: #d0e1fd; } /* Mavi ton */
-.grow-2 { flex-grow: 2; background: #d4edda; } /* Yeşil ton */
-.grow-3 { flex-grow: 1; background: #fde2cd; } /* Turuncu ton */
 
-.grow-1 h3, .grow-2 h3, .grow-3 h3 { margin-bottom: 5px; }
-.grow-1 p, .grow-2 p, .grow-3 p { font-size: 13px; color: #555; margin-bottom: 15px; }
+/* Flex Grow Uygulaması (1-2-1) */
+.grow-1 { flex-grow: 1; background: #d1ecf1; display: flex; justify-content: center; align-items: center; border: 1px solid #bee5eb; }
+.grow-2 { flex-grow: 2; background: #d4edda; display: flex; justify-content: center; align-items: center; border: 1px solid #c3e6cb; }
+.grow-3 { flex-grow: 1; background: #fff3cd; display: flex; justify-content: center; align-items: center; border: 1px solid #ffeeba; }
 
-/* Flex Butonları */
-.flex-btn {
-    background: #7a9eee;
-    color: white;
-    border: none;
-    padding: 8px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.btn-green { background: #6cbf84; }
-.btn-orange { background: #f0a271; }
-
-/* 5) Footer */
 .flex-bottom {
     display: flex;
-    height: 10vh;
+    height: 10vh; /* 10vh zorunlu */
     justify-content: center;
     align-items: center;
-    background: #e9ecef;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    color: #666;
-    font-size: 14px;
+    background: #333;
+    color: white;
+}
+
+/* --- 6. FOOTER --- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    color: #777;
 }
