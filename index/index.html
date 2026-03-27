@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ana Sayfa - Hayat Diler</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -17,6 +17,7 @@
                 <li><a href="about.html">Hakkımda</a></li>
                 <li><a href="interests.html">İlgi Alanlarım</a></li>
                 <li><a href="contact.html">İletişim</a></li>
+                <li><a href="#flex-odev" style="color: #e91e63;">Flexbox Uygulaması</a></li>
             </ul>
         </nav>
     </header>
@@ -37,55 +38,98 @@
             </p>
         </aside>
     </main>
+
     <div class="contact-container">
-    <h2>Detaylı İletişim Formu</h2>
-    <form action="#">
-        <label for="ad-soyad">Ad Soyad:</label>
-        <input type="text" id="ad-soyad" placeholder="Örn: Asaf Karataş" required>
+        <h2>Detaylı İletişim Formu</h2>
+        <form action="#">
+            <label for="ad-soyad">Ad Soyad:</label>
+            <input type="text" id="ad-soyad" placeholder="Örn: Asaf Karataş" required>
 
-        <label for="email">E-posta Adresi:</label>
-        <input type="email" id="email" placeholder="ornek@mail.com" required>
+            <label for="email">E-posta Adresi:</label>
+            <input type="email" id="email" placeholder="ornek@mail.com" required>
 
-        <label for="sifre">Başvuru Takip Şifresi:</label>
-        <input type="password" id="sifre" placeholder="Şifrenizi girin">
+            <label for="sifre">Başvuru Takip Şifresi:</label>
+            <input type="password" id="sifre" placeholder="Şifrenizi girin">
 
-        <label>İletişim Tercihi:</label>
-        <div class="radio-group">
-            <input type="radio" id="mail-tercih" name="tercih" value="email">
-            <label for="mail-tercih">Bana e-posta ile ulaşın</label><br>
-            <input type="radio" id="tel-tercih" name="tercih" value="telefon">
-            <label for="tel-tercih">Bana telefonla ulaşın</label>
-        </div>
+            <label>İletişim Tercihi:</label>
+            <div class="radio-group">
+                <input type="radio" id="mail-tercih" name="tercih" value="email">
+                <label for="mail-tercih">Bana e-posta ile ulaşın</label><br>
+                <input type="radio" id="tel-tercih" name="tercih" value="telefon">
+                <label for="tel-tercih">Bana telefonla ulaşın</label>
+            </div>
 
-        <label>İlgi Alanları / Yetenekler:</label>
-        <div class="checkbox-group">
-            <input type="checkbox" id="html" value="html"> <label for="html">HTML</label><br>
-            <input type="checkbox" id="css" value="css"> <label for="css">CSS</label><br>
-            <input type="checkbox" id="algoritma" value="algoritma"> <label for="algoritma">Algoritma</label>
-        </div>
+            <label>İlgi Alanları / Yetenekler:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="html" value="html"> <label for="html">HTML</label><br>
+                <input type="checkbox" id="css" value="css"> <label for="css">CSS</label><br>
+                <input type="checkbox" id="algoritma" value="algoritma"> <label for="algoritma">Algoritma</label>
+            </div>
 
-        <label for="konu">Konu:</label>
-        <select id="konu">
-            <option value="">Lütfen bir konu seçin...</option>
-            <option value="is">İş Teklifi</option>
-            <option value="soru">Soru</option>
-            <option value="geribildirim">Geri Bildirim</option>
-        </select>
+            <label for="konu">Konu:</label>
+            <select id="konu">
+                <option value="">Lütfen bir konu seçin...</option>
+                <option value="is">İş Teklifi</option>
+                <option value="soru">Soru</option>
+                <option value="geribildirim">Geri Bildirim</option>
+            </select>
 
-        <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
-        <input type="file" id="dosya">
+            <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+            <input type="file" id="dosya">
 
-        <label for="mesaj">Mesajınız:</label>
-        <textarea id="mesaj" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+            <label for="mesaj">Mesajınız:</label>
+            <textarea id="mesaj" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
 
-        <div class="button-group">
-            <button type="submit" class="btn-gonder">Gönder</button>
-            <button type="reset" class="btn-temizle">Temizle</button>
-        </div>
-    </form>
-</div>
+            <div class="button-group">
+                <button type="submit" class="btn-gonder">Gönder</button>
+                <button type="reset" class="btn-temizle">Temizle</button>
+            </div>
+        </form>
+    </div>
+
     <footer>
         <p>&copy; 2026 Hayat Diler | Web Programlama Dersi</p>
     </footer>
+
+    <div id="flex-odev" class="wrapper">
+        <nav class="flex-navbar">
+            <div class="logo">LOGO</div>
+            <ul class="flex-links">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+
+        <section class="flex-hero">
+            <div class="hero-content">
+                <h1>Hero Başlık</h1>
+                <p>Flexbox ile iki kolonlu yapı.</p>
+                <button>Buton</button>
+            </div>
+            <div class="hero-image">Görsel Kutusu</div>
+        </section>
+
+        <section class="flex-cards">
+            <div class="f-card">Kart 1</div>
+            <div class="f-card">Kart 2</div>
+            <div class="f-card">Kart 3</div>
+            <div class="f-card">Kart 4</div>
+            <div class="f-card">Kart 5</div>
+            <div class="f-card">Kart 6</div>
+        </section>
+
+        <section class="flex-grow-area">
+            <div class="grow-1">Kutu 1 (Grow: 1)</div>
+            <div class="grow-2">Kutu 2 (Grow: 2)</div>
+            <div class="grow-3">Kutu 3 (Grow: 1)</div>
+        </section>
+
+        <footer class="flex-bottom">
+            <p>© 2026 - Flexbox Bölümü</p>
+        </footer>
+    </div>
+
 </body>
 </html>
