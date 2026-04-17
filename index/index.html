@@ -122,5 +122,52 @@
         </div>
 
     </div>
+    <script>
+        // Uygulama 1: Öğrenci Not Hesaplama
+        function hesaplaNot() {
+            let isim = document.getElementById("adSoyad").value;
+            let vize = parseFloat(document.getElementById("vizeNotu").value);
+            let final = parseFloat(document.getElementById("finalNotu").value);
+            
+            // Ortalama hesabı: Vize %40, Final %60
+            let ortalama = (vize * 0.4) + (final * 0.6);
+            
+            // Durum kontrolü (>= 50 ise Geçti)
+            let durum = ortalama >= 50 ? "Geçti" : "Kaldı";
+            
+            // Basit harf notu algoritması
+            let harf = "FF";
+            if(ortalama >= 85) harf = "AA";
+            else if(ortalama >= 70) harf = "BB";
+            else if(ortalama >= 60) harf = "CB";
+            else if(ortalama >= 50) harf = "CC";
+
+            // Sonucu HTML'e yazdırma
+            let sonucAlani = document.getElementById("notSonuc");
+            sonucAlani.innerHTML = `<strong>${isim}</strong><br>
+                                    Ortalama: ${ortalama.toFixed(2)}<br>
+                                    Harf Notu: ${harf}<br>
+                                    Durum: ${durum}`;
+        }
+
+        // Uygulama 2: Birim Dönüştürücü
+        function hesaplaDonusum() {
+            let deger = parseFloat(document.getElementById("donusumDegeri").value);
+            let tip = document.getElementById("donusumTipi").value;
+            let sonuc = 0;
+
+            // Seçilen tipe göre işlem yapma
+            if (tip === "c_to_f") {
+                sonuc = (deger * 9/5) + 32; // Celsius -> Fahrenheit
+            } else if (tip === "m_to_km") {
+                sonuc = deger / 1000;       // Metre -> Kilometre
+            } else if (tip === "kg_to_g") {
+                sonuc = deger * 1000;       // Kilogram -> Gram
+            }
+
+            // Sonucu yazdırma ve ondalık formatı düzenleme
+            document.getElementById("donusumSonuc").innerText = `Sonuç: ${sonuc}`;
+        }
+    </script>
 </body>
 </html>
