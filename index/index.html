@@ -91,6 +91,36 @@
     <footer>
         <p>&copy; 2026 Hayat Diler | Web Programlama Dersi</p>
     </footer>
-    
+    <div class="js-apps-container">
+        
+        <div class="app-card">
+            <h3>Öğrenci Not Hesaplama</h3>
+            <input type="text" id="adSoyad" placeholder="Ad Soyad" value="Filiz Akın">
+            <input type="number" id="vizeNotu" placeholder="Vize Notu" value="60">
+            <input type="number" id="finalNotu" placeholder="Final Notu" value="60">
+            <button onclick="hesaplaNot()">Hesapla</button>
+            <div id="notSonuc" class="result-box">
+                </div>
+        </div>
+
+        <div class="app-card">
+            <h3>Birim Dönüştürücü</h3>
+            <label>Değer Giriniz:</label>
+            <input type="number" id="donusumDegeri" value="50">
+            
+            <label>Dönüşüm Tipi:</label>
+            <select id="donusumTipi">
+                <option value="c_to_f">Celsius -> Fahrenheit</option>
+                <option value="m_to_km">Metre -> Kilometre</option>
+                <option value="kg_to_g">Kilogram -> Gram</option>
+            </select>
+            
+            <button onclick="hesaplaDonusum()" class="btn-blue">Hesapla</button>
+            <div id="donusumSonuc" class="result-box-green">
+                Sonuç: 
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>
