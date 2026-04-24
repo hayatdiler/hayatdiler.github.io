@@ -178,6 +178,7 @@ footer {
 .lab-header {
     text-align: center;
     padding: 20px;
+    padding-top: 80px; /* Butonun başlığı ezmesini engeller */
     background-color: transparent;
     border: none;
 }
