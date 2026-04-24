@@ -37,6 +37,7 @@ nav ul li a {
 nav ul li a:hover { color: #0056b3; text-decoration: underline; }
 
 /* --- İKİ SÜTUNLU PORTFOLYO DÜZENİ --- */
+
 .container {
     display: flex;
     gap: 20px;
@@ -48,15 +49,16 @@ nav ul li a:hover { color: #0056b3; text-decoration: underline; }
 
 .content {
     flex: 2;
-    background-color: #fff2cc;
+    background-color: #ffffff; /* SARI YERİNE TEMİZ BEYAZ YAPTIK */
     padding: 25px;
-    border: 1px solid #e6b8af;
+    border: 1px solid #ddd; /* Kenarlığı da daha yumuşak bir gri yaptık */
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Çok hafif, şık bir gölge ekledik */
 }
 
 .sidebar {
     flex: 1;
-    background-color: #e1f5fe;
+    background-color: #e1f5fe; /* Burası mavi kalabilir, güzel bir kontrast yaratır */
     padding: 25px;
     border: 1px solid #b3e5fc;
     border-radius: 8px;
@@ -85,12 +87,6 @@ nav ul li a:hover { color: #0056b3; text-decoration: underline; }
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-/* İletişim sayfası için temiz arka plan */
-.contact-content {
-    background-color: #ffffff; /* Temiz beyaz arka plan */
-    border: 1px solid #ddd;    /* İnce, şık bir kenarlık */
 }
 
 .button-group { display: flex; gap: 15px; }
