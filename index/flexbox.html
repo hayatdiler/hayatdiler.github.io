@@ -4,6 +4,38 @@
     <meta charset="UTF-8">
     <title>Flexbox Uygulaması - Hayat Diler</title>
     <link rel="stylesheet" href="../styles/style.css">
+    
+    <style>
+        body { background-color: #f4f6f9; }
+        
+        #flex-odev {
+            border: none !important; /* O çirkin kalın çerçeveyi sildik */
+            height: auto !important; /* İçeriğin sıkışmasını engeller */
+            min-height: 80vh;
+            margin: 30px auto !important;
+            max-width: 1200px; /* Diğer sayfalarla aynı genişlikte tutar */
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Modern gölge */
+            padding: 30px;
+        }
+
+        /* İç kutulara yuvarlaklık ve ferahlık kattık */
+        .flex-navbar { border-radius: 8px; margin-bottom: 20px; border: 1px solid #eaeaea; }
+        .flex-hero { border-radius: 8px; margin-bottom: 20px; }
+        .hero-content, .hero-image { border-radius: 8px; }
+        .flex-cards { background: transparent; padding: 0; margin-bottom: 20px; border: none; }
+        .f-card { 
+            border-radius: 10px; 
+            border: 1px solid #eaeaea; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
+            transition: transform 0.2s;
+        }
+        .f-card:hover { transform: translateY(-5px); }
+        .flex-grow-area { margin-bottom: 20px; gap: 15px; }
+        .grow-1, .grow-2, .grow-3 { border-radius: 8px; border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .flex-bottom { border-radius: 8px; }
+    </style>
 </head>
 <body>
     <header>
@@ -14,7 +46,6 @@
         <nav>
             <ul>
                 <li><a href="index.html" style="color: #dc3545; font-weight: bold;">⬅ Laboratuvar Portalına Dön</a></li>
-        
                 <li><a href="cv.html">Özgeçmişim</a></li>
                 <li><a href="about.html">Hakkımda</a></li>
                 <li><a href="interests.html">İlgi Alanlarım</a></li>
@@ -23,42 +54,42 @@
         </nav>
     </header>
 
-    <div id="flex-odev" class="wrapper" style="margin-top: 0; border-top: none;">
+    <div id="flex-odev" class="wrapper">
         
         <nav class="flex-navbar">
             <div class="logo">FLEX LOGO</div>
             <ul class="flex-links">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
+                <li><a href="#" style="font-weight: bold;">Link 1</a></li>
+                <li><a href="#" style="font-weight: bold;">Link 2</a></li>
+                <li><a href="#" style="font-weight: bold;">Link 3</a></li>
+                <li><a href="#" style="font-weight: bold;">Link 4</a></li>
             </ul>
         </nav>
 
         <section class="flex-hero">
             <div class="hero-content">
-                <h1>Flexbox Düzeni</h1>
+                <h1 style="color: #2c1e4a;">Flexbox Düzeni</h1>
                 <p>Bu sayfa tamamen CSS Flexbox mantığı ile tasarlanmıştır. Kutular esnek bir şekilde ekrana yerleşir.</p>
-                <button class="btn">Buton</button>
+                <button class="flex-btn">Detayları Gör</button>
             </div>
             <div class="hero-image">
-                Görsel Kutusu
+                <span style="color: #666; font-weight: bold;">Görsel Kutusu</span>
             </div>
         </section>
 
         <section class="flex-cards">
-            <div class="f-card">Kart 1</div>
-            <div class="f-card">Kart 2</div>
-            <div class="f-card">Kart 3</div>
-            <div class="f-card">Kart 4</div>
-            <div class="f-card">Kart 5</div>
-            <div class="f-card">Kart 6</div>
+            <div class="f-card"><h3>Kart 1</h3><p>İçerik özeti</p></div>
+            <div class="f-card"><h3>Kart 2</h3><p>İçerik özeti</p></div>
+            <div class="f-card"><h3>Kart 3</h3><p>İçerik özeti</p></div>
+            <div class="f-card"><h3>Kart 4</h3><p>İçerik özeti</p></div>
+            <div class="f-card"><h3>Kart 5</h3><p>İçerik özeti</p></div>
+            <div class="f-card"><h3>Kart 6</h3><p>İçerik özeti</p></div>
         </section>
 
         <section class="flex-grow-area">
-            <div class="grow-1">1 Kutu (Grow: 1)</div>
-            <div class="grow-2">2 Kutu (Grow: 2)</div>
-            <div class="grow-3">3 Kutu (Grow: 1)</div>
+            <div class="grow-1"><h3 style="color: #0c5460;">1 Kutu</h3><p>Grow: 1</p></div>
+            <div class="grow-2"><h3 style="color: #155724;">2 Kutu</h3><p>Grow: 2</p></div>
+            <div class="grow-3"><h3 style="color: #856404;">3 Kutu</h3><p>Grow: 1</p></div>
         </section>
 
         <footer class="flex-bottom">
