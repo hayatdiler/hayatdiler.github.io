@@ -1,5 +1,5 @@
 /* ========================================== */
-/* 1. GENEL AYARLAR VE PASTEL TEMA            */
+/* 1. GENEL AYARLAR VE DARK MODE TEMA         */
 /* ========================================== */
 * {
     box-sizing: border-box;
@@ -9,41 +9,43 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fffafc; /* Çok hafif pastel pembemsi beyaz (Hapishane grisine son!) */
-    color: #555;
+    background-color: #0f172a; /* Çok koyu lacivert (Gece Modu) */
+    color: #cbd5e1; /* Açık gri/mavi metinler */
     line-height: 1.6;
 }
 
-/* Başlıkların rengi tatlı bir mor oldu */
-h1, h2, h3 { color: #835ba8; }
+h1, h2, h3 { color: #f8fafc; } /* Başlıklar parlak beyaz */
+a { color: #38bdf8; } /* Linkler neon mavi */
 
 /* ========================================== */
 /* 2. HEADER VE ANA NAVİGASYON                */
 /* ========================================== */
 header {
-    background-color: #ffffff;
+    background-color: #1e293b; /* Kart arka planı */
     padding: 20px 40px;
-    border-bottom: 3px solid #ffc2d1; /* Pastel pembe alt çizgi */
+    border-bottom: 2px solid #38bdf8; /* Neon mavi alt çizgi */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 15px rgba(200, 180, 220, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-header h1 { font-size: 26px; color: #a06cd5; } /* Lila */
-header p { font-size: 14px; color: #888; }
+header h1 { font-size: 26px; color: #38bdf8; } 
+header p { font-size: 14px; color: #94a3b8; }
 
 nav ul { list-style-type: none; display: flex; }
 nav ul li { margin-left: 20px; }
 
-/* Linkler lila, üzerine gelince pastel pembe oluyor */
 nav ul li a {
     text-decoration: none;
-    color: #a06cd5; 
+    color: #94a3b8; 
     font-weight: bold;
-    transition: color 0.3s;
+    transition: all 0.3s;
 }
-nav ul li a:hover { color: #ff8fab; } 
+nav ul li a:hover { 
+    color: #38bdf8; 
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.5); /* Hoverda parlama efekti */
+} 
 
 /* ========================================== */
 /* 3. PORTFOLYO DÜZENİ (Hakkımda, İlgi Alanları) */
@@ -57,20 +59,21 @@ nav ul li a:hover { color: #ff8fab; }
 
 .content {
     flex: 2;
-    background-color: #ffffff;
+    background-color: #1e293b;
     padding: 30px;
-    border: 2px solid #f2e8f5; /* Çok yumuşak mor kenarlık */
-    border-radius: 15px; /* Daha yuvarlak köşeler */
-    box-shadow: 0 8px 20px rgba(200, 180, 220, 0.15); /* Morumsu tatlı gölge */
+    border: 1px solid #334155;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar {
     flex: 1;
-    background-color: #f0f7ff; /* Pastel bebek mavisi */
+    background-color: #0f172a;
     padding: 30px;
-    border: 2px solid #d8ecff;
-    border-radius: 15px;
-    color: #4a6fa5;
+    border: 1px solid #38bdf8;
+    border-radius: 12px;
+    color: #94a3b8;
+    box-shadow: inset 0 0 10px rgba(56, 189, 248, 0.05);
 }
 
 /* ========================================== */
@@ -81,14 +84,14 @@ nav ul li a:hover { color: #ff8fab; }
     max-width: 600px;
     margin: 40px auto;
     padding: 35px;
-    border: 2px solid #f2e8f5;
-    border-radius: 15px;
-    background-color: #ffffff;
-    box-shadow: 0 8px 20px rgba(200, 180, 220, 0.15);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    background-color: #1e293b;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.contact-container h2 { text-align: center; margin-bottom: 25px; color: #835ba8; }
-.contact-container label { display: block; margin-bottom: 8px; font-weight: bold; color: #777;}
+.contact-container h2 { text-align: center; margin-bottom: 25px; color: #38bdf8; }
+.contact-container label { display: block; margin-bottom: 8px; font-weight: bold; color: #e2e8f0;}
 
 .contact-container input[type="text"],
 .contact-container input[type="email"],
@@ -98,28 +101,23 @@ nav ul li a:hover { color: #ff8fab; }
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 2px solid #f2e8f5;
+    border: 1px solid #475569;
     border-radius: 8px;
-    background-color: #faf8fc;
-    color: #555;
+    background-color: #0f172a; /* Koyu input içi */
+    color: #f8fafc;
     outline: none;
+    transition: 0.3s;
 }
-.contact-container input:focus, .contact-container textarea:focus { border-color: #b28dff; }
-
-.radio-group, .checkbox-group {
-    background-color: #fff5f7; /* İçi çok uçuk pembe */
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #ffe5ec;
+.contact-container input:focus, .contact-container textarea:focus { 
+    border-color: #38bdf8; 
+    box-shadow: 0 0 5px rgba(56, 189, 248, 0.3);
 }
 
-/* Butonlar Pastel Renklerde */
 .button-group { display: flex; gap: 15px; }
-.btn-gonder { flex: 1; background: #b28dff; color: white; border: none; padding: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s;}
-.btn-gonder:hover { background: #966bdf; }
-.btn-temizle { flex: 1; background: #ffb7b2; color: white; border: none; padding: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s;}
-.btn-temizle:hover { background: #ff9eaa; }
+.btn-gonder { flex: 1; background: #38bdf8; color: #0f172a; border: none; padding: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s;}
+.btn-gonder:hover { background: #0ea5e9; box-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }
+.btn-temizle { flex: 1; background: #ef4444; color: white; border: none; padding: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s;}
+.btn-temizle:hover { background: #dc2626; box-shadow: 0 0 10px rgba(239, 68, 68, 0.5); }
 
 /* ========================================== */
 /* 5. FLEXBOX ÖDEV BÖLÜMÜ                     */
@@ -128,12 +126,12 @@ nav ul li a:hover { color: #ff8fab; }
     display: flex;
     flex-direction: column;
     min-height: 80vh;
-    background-color: #ffffff;
+    background-color: #1e293b;
     padding: 30px;
     gap: 20px;
-    border-radius: 15px;
-    border: 2px solid #f2e8f5;
-    box-shadow: 0 8px 20px rgba(200, 180, 220, 0.15);
+    border-radius: 12px;
+    border: 1px solid #334155;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     margin: 40px auto;
     max-width: 1200px;
 }
@@ -143,123 +141,95 @@ nav ul li a:hover { color: #ff8fab; }
     height: 8vh;
     justify-content: space-between;
     align-items: center;
-    background: #fffafc;
+    background: #0f172a;
     padding: 0 30px;
-    border: 1px solid #f2e8f5;
+    border: 1px solid #334155;
     border-radius: 10px;
 }
-.flex-navbar .logo { font-size: 22px; font-weight: bold; color: #ff8fab; }
+.flex-navbar .logo { font-size: 22px; font-weight: bold; color: #8b5cf6; } /* Neon Mor */
 .flex-links { display: flex; list-style: none; gap: 25px; }
-.flex-links a { text-decoration: none; color: #a06cd5; font-weight: bold; }
+.flex-links a { text-decoration: none; color: #cbd5e1; font-weight: bold; transition: 0.3s; }
+.flex-links a:hover { color: #8b5cf6; }
 
-.flex-hero {
-    display: flex;
-    flex-direction: row;
-    min-height: 30vh;
-    gap: 20px;
-}
+.flex-hero { display: flex; flex-direction: row; min-height: 30vh; gap: 20px; }
 .hero-content {
-    flex: 1;
-    background: #f8f4ff; /* Çok açık lila */
-    border: 1px solid #eaddff;
-    border-radius: 10px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex: 1; background: #0f172a; border: 1px solid #334155; border-radius: 10px; padding: 40px; display: flex; flex-direction: column; justify-content: center;
 }
 .hero-image {
-    flex: 1;
-    background: #ffe5ec; /* Pastel pembe */
-    border: 1px solid #ffc2d1;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #e56b82;
-    font-weight: bold;
-    font-size: 18px;
+    flex: 1; background: #1e293b; border: 1px solid #8b5cf6; border-radius: 10px; display: flex; justify-content: center; align-items: center; color: #8b5cf6; font-weight: bold; font-size: 18px; box-shadow: inset 0 0 15px rgba(139, 92, 246, 0.1);
 }
 
 .flex-cards { display: flex; flex-wrap: wrap; gap: 20px; }
 .f-card { 
     flex: 1 1 calc(33.33% - 20px); 
-    background: #ffffff;
-    border: 2px solid #f2e8f5; 
-    border-radius: 10px;
+    background: #0f172a; border: 1px solid #334155; border-radius: 10px;
     display: flex; flex-direction: column; justify-content: center; align-items: center;
-    padding: 30px 15px; text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 30px 15px; text-align: center; transition: 0.3s;
 }
-.f-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(200, 180, 220, 0.2);
-    border-color: #d8ecff; /* Hover olunca bebek mavisi çerçeve */
-}
+.f-card:hover { transform: translateY(-5px); border-color: #38bdf8; box-shadow: 0 5px 15px rgba(56, 189, 248, 0.15); }
 
 .flex-grow-area { display: flex; min-height: 15vh; gap: 20px; align-items: stretch; }
 .grow-1, .grow-2, .grow-3 { display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 10px; padding: 20px;}
-.grow-1 { flex-grow: 1; background: #e0fbfc; border: 1px solid #c2dfe3; color: #5c9ead; } /* Bebek mavisi */
-.grow-2 { flex-grow: 2; background: #f3e8ff; border: 1px solid #eaddff; color: #9b72cf; } /* Lila */
-.grow-3 { flex-grow: 1; background: #ffe5ec; border: 1px solid #ffc2d1; color: #e56b82; } /* Pembe */
+.grow-1 { flex-grow: 1; background: #0f172a; border: 1px solid #10b981; color: #10b981; } /* Neon Yeşil */
+.grow-2 { flex-grow: 2; background: #0f172a; border: 1px solid #8b5cf6; color: #8b5cf6; } /* Neon Mor */
+.grow-3 { flex-grow: 1; background: #0f172a; border: 1px solid #f59e0b; color: #f59e0b; } /* Neon Turuncu */
 
-.flex-btn { background: #b28dff; color: white; border: none; padding: 12px 25px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s;}
-.flex-btn:hover { background: #ff8fab; }
+.flex-btn { background: #8b5cf6; color: white; border: none; padding: 12px 25px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s;}
+.flex-btn:hover { background: #7c3aed; box-shadow: 0 0 10px rgba(139, 92, 246, 0.4); }
 
-.flex-bottom { display: flex; height: 8vh; justify-content: center; align-items: center; background: #fffafc; border: 1px solid #f2e8f5; border-radius: 10px; color: #888; }
+.flex-bottom { display: flex; height: 8vh; justify-content: center; align-items: center; background: #0f172a; border: 1px solid #334155; border-radius: 10px; color: #64748b; }
 
 /* ========================================== */
 /* 6. LAB 5: CSS POSITION KODLARI             */
 /* ========================================== */
-.lab-body { margin: 0; padding: 0; background-color: #fffafc; }
+.lab-body { margin: 0; padding: 0; background-color: #0f172a; }
 .lab-header { text-align: center; padding: 20px; padding-top: 80px; background-color: transparent; border: none; }
 .lab-main-container { display: flex; justify-content: center; align-items: center; min-height: 70vh; padding: 40px 20px; }
 
 .announcement-card {
     position: relative;
     width: 650px;
-    background: linear-gradient(135deg, #f8f4ff 0%, #ffe5ec 100%); /* Mor'dan pembeye tatlı geçiş */
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); 
+    border: 1px solid #334155;
     border-radius: 15px;
     padding: 50px;
-    box-shadow: 0 10px 25px rgba(200, 180, 220, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-.badge { position: absolute; padding: 8px 16px; border-radius: 8px; font-weight: bold; font-size: 14px; z-index: 10; box-shadow: 0 3px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+.badge { position: absolute; padding: 8px 16px; border-radius: 8px; font-weight: bold; font-size: 14px; z-index: 10; transition: transform 0.3s ease; }
 .badge:hover { cursor: pointer; transform: translateY(-5px); }
 
-/* Badgeler de pastel oldu */
-.badge-free { top: -15px; left: -15px; background-color: #ffecd2; color: #c69c6d; } /* Uçuk Sarı */
-.badge-date { top: -15px; right: -15px; background-color: #d1fae5; color: #059669; } /* Nane Yeşili */
-.badge-location { bottom: 30px; right: 40px; background-color: #ffffff; color: #a06cd5; cursor: crosshair; }
-.badge-deadline { bottom: -15px; right: -15px; background-color: #ffb7b2; color: #fff; cursor: help; }
+.badge-free { top: -15px; left: -15px; background-color: #10b981; color: #0f172a; } 
+.badge-date { top: -15px; right: -15px; background-color: #38bdf8; color: #0f172a; } 
+.badge-location { bottom: 30px; right: 40px; background-color: #1e293b; color: #cbd5e1; border: 1px solid #475569; cursor: crosshair; }
+.badge-deadline { bottom: -15px; right: -15px; background-color: #ef4444; color: #fff; cursor: help; }
 
 .card-content { position: relative; z-index: 5; }
-.card-content h2 { margin-top: 0; font-size: 32px; color: #6a4c93; }
-.decorative-circle { position: absolute; width: 250px; height: 250px; background-color: rgba(255, 255, 255, 0.5); border-radius: 50%; bottom: -50px; right: 20px; z-index: 2; }
+.card-content h2 { margin-top: 0; font-size: 32px; color: #f8fafc; }
+.decorative-circle { position: absolute; width: 250px; height: 250px; background-color: rgba(56, 189, 248, 0.05); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 50%; bottom: -50px; right: 20px; z-index: 2; }
 
-.fixed-back-btn { position: fixed; top: 20px; left: 20px; background-color: #fff; color: #a06cd5; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(200, 180, 220, 0.2); z-index: 100; border: 2px solid #f2e8f5; transition: 0.3s; }
-.fixed-back-btn:hover { background-color: #a06cd5; color: #fff; }
+.fixed-back-btn { position: fixed; top: 20px; left: 20px; background-color: #1e293b; color: #38bdf8; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 1px solid #334155; z-index: 100; transition: 0.3s; }
+.fixed-back-btn:hover { background-color: #38bdf8; color: #0f172a; }
 
-.fixed-helper { position: fixed; bottom: 30px; right: 30px; background-color: #ff8fab; color: white; padding: 15px 25px; border-radius: 30px; font-weight: bold; box-shadow: 0 4px 15px rgba(255, 143, 171, 0.4); z-index: 100; cursor: pointer; animation: pulse 2s infinite; }
-.fixed-helper:active { transform: scale(0.95); }
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 143, 171, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(255, 143, 171, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 143, 171, 0); } }
+.fixed-helper { position: fixed; bottom: 30px; right: 30px; background-color: #8b5cf6; color: white; padding: 15px 25px; border-radius: 30px; font-weight: bold; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4); z-index: 100; cursor: pointer; animation: pulse 2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(139, 92, 246, 0); } 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); } }
 
 /* ========================================== */
 /* 7. JS UYGULAMALARI (LAB 6)                 */
 /* ========================================== */
-.js-apps-container { display: flex; gap: 30px; justify-content: center; padding: 40px 20px; background-color: #fffafc; }
-.app-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 20px rgba(200, 180, 220, 0.15); width: 320px; display: flex; flex-direction: column; gap: 12px; border: 2px solid #f2e8f5; }
-.app-card h3 { margin-bottom: 10px; border-bottom: 2px solid #ffe5ec; padding-bottom: 10px; color: #835ba8; }
-.app-card input, .app-card select { padding: 12px; border: 2px solid #f2e8f5; border-radius: 8px; background: #faf8fc; outline: none; }
-.app-card input:focus, .app-card select:focus { border-color: #b28dff; }
-.app-card button { padding: 12px; background-color: #ffb7b2; color: white; border: none; cursor: pointer; font-weight: bold; border-radius: 8px; transition: 0.3s; }
-.app-card button:hover { background-color: #ff9eaa; }
-.app-card button.btn-blue { background-color: #b28dff; }
-.app-card button.btn-blue:hover { background-color: #966bdf; }
-.result-box { margin-top: 15px; padding: 15px; background-color: #f8f4ff; border: 1px solid #eaddff; border-radius: 8px; min-height: 80px; color: #6a4c93; }
-.result-box-green { margin-top: 15px; padding: 15px; background-color: #e0fbfc; border: 1px solid #c2dfe3; color: #3d889c; font-weight: bold; text-align: center; border-radius: 8px; }
+.js-apps-container { display: flex; gap: 30px; justify-content: center; padding: 40px 20px; background-color: #0f172a; }
+.app-card { background: #1e293b; padding: 25px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); border: 1px solid #334155; width: 320px; display: flex; flex-direction: column; gap: 12px; }
+.app-card h3 { margin-bottom: 10px; border-bottom: 1px solid #334155; padding-bottom: 10px; color: #38bdf8; }
+.app-card input, .app-card select { padding: 12px; border: 1px solid #475569; border-radius: 8px; background: #0f172a; color: #f8fafc; outline: none; transition: 0.3s; }
+.app-card input:focus, .app-card select:focus { border-color: #8b5cf6; }
+.app-card button { padding: 12px; background-color: #38bdf8; color: #0f172a; border: none; cursor: pointer; font-weight: bold; border-radius: 8px; transition: 0.3s; }
+.app-card button:hover { background-color: #0ea5e9; }
+.app-card button.btn-blue { background-color: #8b5cf6; color: white; }
+.app-card button.btn-blue:hover { background-color: #7c3aed; }
+.result-box { margin-top: 15px; padding: 15px; background-color: #0f172a; border: 1px solid #334155; border-radius: 8px; min-height: 80px; color: #cbd5e1; }
+.result-box-green { margin-top: 15px; padding: 15px; background-color: #064e3b; border: 1px solid #059669; color: #34d399; font-weight: bold; text-align: center; border-radius: 8px; }
 
 /* FOOTER */
-footer { text-align: center; margin-top: 40px; padding: 20px; color: #a9a9a9; }
-footer hr { border: 0; height: 2px; background: #f2e8f5; margin-bottom: 15px; }
+footer { text-align: center; margin-top: 40px; padding: 20px; color: #64748b; }
+footer hr { border: 0; height: 1px; background: #334155; margin-bottom: 15px; }
