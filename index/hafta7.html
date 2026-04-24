@@ -5,16 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hafta 7 - Bootstrap ve JS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Sadece ufak dokunuşlar, ana yapı Bootstrap */
-        body { transition: background-color 0.3s, color 0.3s; }
-        .hero-section { padding: 80px 0; }
-        .number-badge { 
-            width: 30px; height: 30px; 
-            display: inline-flex; align-items: center; justify-content: center; 
-            border-radius: 5px; font-weight: bold; margin-bottom: 15px; 
-        }
-    </style>
+    <link rel="stylesheet" href="styles/hafta7.css">
 </head>
 <body>
 
@@ -242,70 +233,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        // 1. TEMA DEĞİŞTİRME MANTIĞI
-        const btnTema = document.getElementById('btnTema');
-        const htmlElement = document.documentElement; // <html> etiketini seçer
-
-        btnTema.addEventListener('click', function() {
-            // Mevcut temayı kontrol et
-            const suAnkiTema = htmlElement.getAttribute('data-bs-theme');
-            
-            if (suAnkiTema === 'light') {
-                htmlElement.setAttribute('data-bs-theme', 'dark');
-                btnTema.textContent = 'Açık Temaya Geç';
-                btnTema.classList.replace('btn-outline-dark', 'btn-light');
-            } else {
-                htmlElement.setAttribute('data-bs-theme', 'light');
-                btnTema.textContent = 'Koyu Temaya Geç';
-                btnTema.classList.replace('btn-light', 'btn-outline-dark');
-            }
-        });
-
-        // 2. FORM VERİLERİNİ OKUMA VE ÖZET OLUŞTURMA
-        const kayitFormu = document.getElementById('kayitFormu');
-        const sonucAlani = document.getElementById('sonucAlani');
-
-        kayitFormu.addEventListener('submit', function(event) {
-            // Formun sayfayı yenilemesini (varsayılan davranışı) engeller
-            event.preventDefault();
-
-            // Inputlardan değerleri alıyoruz
-            const ad = document.getElementById('adSoyad').value.trim();
-            const mail = document.getElementById('email').value.trim();
-            const sinif = document.getElementById('sinif').value;
-            const oturum = document.getElementById('oturum').value;
-            const katilim = document.getElementById('katilimTuru').value;
-            const onay = document.getElementById('onay').checked;
-
-            // Eksik Alan Kontrolü (Zorunlu alanlar)
-            if (!ad || !mail) {
-                alert("Lütfen Ad Soyad ve E-posta alanlarını doldurunuz!");
-                return; // Kodun aşağıya inmesini durdur
-            }
-
-            if (!onay) {
-                alert("Lütfen aydınlatma metnini (checkbox) onaylayınız!");
-                return;
-            }
-
-            // Başarılı Senaryo: Sonuç alanını güncelle
-            sonucAlani.classList.replace('alert-info', 'alert-success');
-            sonucAlani.innerHTML = `
-                <h4 class="alert-heading fw-bold mb-3">✅ Başvuru Başarılı!</h4>
-                <p>Sayın <strong>${ad}</strong>, kaydınız alınmıştır.</p>
-                <hr>
-                <ul class="mb-0">
-                    <li><strong>E-posta:</strong> ${mail}</li>
-                    <li><strong>Sınıf:</strong> ${sinif || 'Belirtilmedi'}</li>
-                    <li><strong>Seçilen Oturum:</strong> ${oturum}</li>
-                    <li><strong>Katılım Türü:</strong> ${katilim}</li>
-                </ul>
-            `;
-            
-            // Kullanıcıyı sonuç alanına doğru hafifçe kaydır
-            sonucAlani.scrollIntoView({ behavior: "smooth", block: "center" });
-        });
-    </script>
+    <script src="scripts/hafta7.js"></script>
+    
 </body>
 </html>
