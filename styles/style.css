@@ -87,6 +87,12 @@ nav ul li a:hover { color: #0056b3; text-decoration: underline; }
     border-radius: 5px;
 }
 
+/* İletişim sayfası için temiz arka plan */
+.contact-content {
+    background-color: #ffffff; /* Temiz beyaz arka plan */
+    border: 1px solid #ddd;    /* İnce, şık bir kenarlık */
+}
+
 .button-group { display: flex; gap: 15px; }
 .btn-gonder { flex: 1; background: #007bff; color: white; border: none; padding: 15px; border-radius: 8px; cursor: pointer; }
 .btn-temizle { flex: 1; background: #dc3545; color: white; border: none; padding: 15px; border-radius: 8px; cursor: pointer; }
